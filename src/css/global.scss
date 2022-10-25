@@ -1,0 +1,20 @@
+// 默认页面容器样式
+.layout-content-default {
+  margin: 24px 16px;
+  padding: 24px;
+  background: #fff;
+  min-height: 280px;
+}
+
+// 切换页签动画效果  https://v3.cn.vuejs.org/guide/transitions-overview.html#%E7%BC%93%E5%8A%A8%E6%95%88%E6%9E%9C
+// fade
+.fade-enter-active {
+  transition: opacity 0.25s ease;
+}
+.fade-leave-active {
+  transition: opacity 0s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
