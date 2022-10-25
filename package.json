@@ -16,14 +16,13 @@
     "ramda": "^0.28.0",
     "sass": "^1.55.0",
     "vue": "^3.2.41",
-    "vue-router": "^4.1.6"
+    "vue-router": "4"
   },
   "devDependencies": {
     "@types/ramda": "0.28.18",
     "@vitejs/plugin-vue": "^3.1.2",
     "unplugin-auto-import": "^0.11.3",
     "unplugin-vue-components": "^0.22.9",
-    "vite": "^3.1.8",
-    "vite-plugin-mock": "^2.9.6"
+    "vite": "^3.1.8"
   }
 }

@@ -28,8 +28,12 @@ import { splitEvery, sum } from 'ramda'
 import { computed, ref } from 'vue'
 const input = ref('')
 
-const nums = computed(() => splitEvery(2, input.value.replaceAll(' ', '')))
+const nums = computed(() => splitEvery(2, input.value.replace(/[\r\n]/g, '').replaceAll(' ', '')))
 const count = computed(() => sum(nums.value.map((x) => `0x${x.trim()}`)))
+setInterval(() => {
+  console.log(input.value.replace(/^\s*/g, '').replace(/[\r\n]/g, ''))
+  console.log(nums.value)
+}, 1000)
 const someError = computed(() => isNaN(count.value))
 </script>
 
