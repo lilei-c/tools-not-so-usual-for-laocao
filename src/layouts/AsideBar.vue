@@ -28,7 +28,7 @@
         <MenuFoldOutlined v-else class="trigger" @click="toggle" />
       </div> -->
       <a-menu :selectedKeys="selectedKeys" :selectable="false" theme="dark" mode="inline">
-        <a-menu-item v-for="item in routes" :index="item.path" :key="item.path" @click="this.$router.push(item.path)">
+        <a-menu-item v-for="item in routes" :index="item.path" :key="item.path" @click="router.push(item.path)">
           <component :is="item.icon" />
           <span>{{ item.name }}</span>
         </a-menu-item>
@@ -41,7 +41,14 @@
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons-vue'
 import { routes } from '../router'
 import { useStore, useStoreRefs } from '../store/layout'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
+// console.log(router)
+// const goto = (path) => {
+//   console.log(path)
+//   router.push(path)
+// }
 const toggle = useStore().toggleMenuCollapsed
 
 //

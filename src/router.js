@@ -4,7 +4,7 @@ import { UserOutlined, VideoCameraOutlined, FormOutlined, TableOutlined } from '
 
 const menus = [
   { path: '/', name: '16进制累加', icon: UserOutlined, component: Count0x },
-  // { path: '/page1', name: 'page1', icon: VideoCameraOutlined, component: Page1 },
+  { path: '/page1', name: 'page1', icon: VideoCameraOutlined, component: Count0x },
   // { path: '/login', name: '用户登录', icon: UserOutlined, component: Login, meta: { noLayout: true } },
 ]
 const devMenus = []
